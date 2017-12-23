@@ -47,6 +47,7 @@ public class CameraController : MonoBehaviour {
 			RaycastHit hit;
 			if (Physics.Raycast (ray, out hit, 100)) {
 				Vector3 targetPos = hit.point;
+				Debug.Log (hit.point);
 				characterManager.SendMoveCommand (targetPos);
 			}
 
